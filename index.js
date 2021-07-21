@@ -6,12 +6,14 @@ console.log("Menuangkan kopi ke dalam gelas");
 console.log("Menuangkan susu ke dalam gelas");
 console.log("Kopi Anda sudah siap!");
 
-// import coffeeStock from "state";
 // const coffeeStock = require("./state");
-const {coffeeStock, isCoffeeMachineReady} = require("./state");
+// const {coffeeStock, isCoffeeMachineReady} = require("./state");
+// import coffeeStock from "./state.js";
+// import { coffeeStock, isCoffeeMachineReady } from "./state.js";
+import { coffeeStock as stock, isCoffeeMachineReady } from "./state.js";
 
 const makeCoffee = (type, miligrams) => {
-  if (coffeeStock[type] >= miligrams) {
+  if (stock[type] >= miligrams) {
     console.log("Kopi berhasil dibuat!");
   } else {
     console.log("Biji kopi habis!");
@@ -19,5 +21,5 @@ const makeCoffee = (type, miligrams) => {
 };
 
 makeCoffee("robusta", 80);
-console.log(coffeeStock);
+console.log(stock);
 console.log(isCoffeeMachineReady);

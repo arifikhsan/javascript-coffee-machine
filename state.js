@@ -7,6 +7,8 @@ const coffeeStock = {
 const isCoffeeMachineReady = true;
 
 // module.exports = coffeeStock;
-module.exports = { coffeeStock, isCoffeeMachineReady };
+// module.exports = { coffeeStock, isCoffeeMachineReady };
+// export default coffeeStock;
+export { coffeeStock, isCoffeeMachineReady };
 
 // console.log(module)
